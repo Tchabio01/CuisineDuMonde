@@ -1,0 +1,45 @@
+name: Compilation de CuisineDuMonde
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+      - build/github-actions
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm ci
+
+      - name: Compiler l'application
+        run: npm run build
+
+      - name: Vérifier les fichiers générés
+        run: test -s dist/index.html
+
+      - name: Préparer l'archive de production
+        run: |
+          tar -czf CuisineDuMonde-dist.tar.gz -C dist .
+
+      - name: Publier l'archive comme artefact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CuisineDuMonde-dist
+          path: CuisineDuMonde-dist.tar.gz
+          if-no-files-found: error
+          retention-days: 7
