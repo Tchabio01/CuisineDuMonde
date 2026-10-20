@@ -1,0 +1,18 @@
+{
+  "name": "Cuisine du Monde",
+  "short_name": "CuisineMonde",
+  "description": "Application de recettes internationales avec assistant frigo intelligent et liste de courses",
+  "start_url": "/",
+  "theme_color": "#ea580c",
+  "background_color": "#fafaf9",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/pwa-icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

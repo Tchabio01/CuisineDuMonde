@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)"/>
+  <!-- Cloche / Globe / Toque icon -->
+  <path d="M128 352h256v24H128z" fill="#fff" opacity="0.9"/>
+  <path d="M144 328c0-56 42-104 100-110v-30c0-6.6 5.4-12 12-12s12 5.4 12 12v30c58 6 100 54 100 110H144z" fill="#fff"/>
+  <circle cx="256" cy="156" r="18" fill="#fef08a"/>
+  <!-- Sparkles / Aroma -->
+  <path d="M220 120c0-10 10-18 10-26s-10-16-10-26" stroke="#fef08a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M256 100c0-10 10-18 10-26s-10-16-10-26" stroke="#fef08a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M292 120c0-10 10-18 10-26s-10-16-10-26" stroke="#fef08a" stroke-width="8" stroke-linecap="round"/>
+</svg>
