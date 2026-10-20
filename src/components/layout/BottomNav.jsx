@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Compass, Refrigerator, ShoppingCart, Heart } from 'lucide-react';
+import { Home, Compass, CalendarDays, Refrigerator, ShoppingCart, Heart } from 'lucide-react';
 import { useFavorites } from '../../context/FavoritesContext';
 import { useShoppingCart } from '../../context/ShoppingCartContext';
 
@@ -12,6 +12,7 @@ export const BottomNav = ({ activeTab, setActiveTab }) => {
   const navItems = [
     { id: 'home', label: 'Accueil', icon: Home },
     { id: 'explore', label: 'Explorer', icon: Compass },
+    { id: 'planner', label: 'Planning', icon: CalendarDays },
     { id: 'fridge', label: 'Mon Frigo', icon: Refrigerator, highlight: true },
     { id: 'cart', label: 'Courses', icon: ShoppingCart, badge: uncompletedCartCount },
     { id: 'favorites', label: 'Favoris', icon: Heart, badge: favorites.length },
@@ -28,7 +29,7 @@ export const BottomNav = ({ activeTab, setActiveTab }) => {
             <button
               key={item.id}
               onClick={() => setActiveTab(item.id)}
-              className={`relative flex flex-col items-center justify-center py-1 px-3 rounded-xl transition-all duration-200 ${
+              className={`relative flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all duration-200 ${
                 isActive
                   ? 'text-brand-600 font-bold scale-105'
                   : 'text-stone-500 hover:text-stone-800 font-medium'

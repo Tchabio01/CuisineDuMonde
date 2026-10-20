@@ -7,6 +7,7 @@ import { RecipeDetailModal } from './components/recipes/RecipeDetailModal';
 import { PantryAssistant } from './components/assistant/PantryAssistant';
 import { ShoppingListView } from './components/shopping/ShoppingListView';
 import { FavoritesView } from './components/favorites/FavoritesView';
+import { MealPlanner } from './components/planner/MealPlanner';
 import { SponsoredCard } from './components/monetization/SponsoredCard';
 import { PremiumModal } from './components/monetization/PremiumModal';
 import { RECIPES } from './data/recipesData';
@@ -196,6 +197,14 @@ export function App() {
               ))}
             </div>
           </div>
+        )}
+
+        {/* VIEW 3: PLANNING HEBDOMADAIRE */}
+        {activeTab === 'planner' && (
+          <MealPlanner
+            recipes={RECIPES}
+            onSelectRecipe={(rec) => setSelectedRecipe(rec)}
+          />
         )}
 
         {/* VIEW 3: ASSISTANT MON FRIGO */}
